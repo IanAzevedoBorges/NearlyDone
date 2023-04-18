@@ -45,18 +45,20 @@ export default {
         mensagem: "",
         seeCreator: false,
       }
-        
     };
   },
   components: {
     ICard,
   },
   computed:{
-    ...mapState(geralStore,{
-      getDataCard:"getDataCard"
-    })
+    ...mapState({
+      
+  }),
   },
   methods: {
+    mounted() {
+      this.mapState
+    },
     ...mapActions(geralStore, {
       setDataCard:"setDataCard"
     }),
@@ -66,6 +68,9 @@ export default {
     },
     saveCard(){
       this.setDataCard(this.modelCard)
+    },
+    reLoadCard(){
+
     }
   },
 };
