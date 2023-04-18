@@ -3,7 +3,7 @@ const setDataCard = function (payload) {
     topic: payload.topic,
     yourName: payload.yourName,
     mensagem: payload.mensagem,
-    canShow: payload.canShow,
+    canShow: payload.seeCreator,
   };
 };
 

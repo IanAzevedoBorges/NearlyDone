@@ -38,10 +38,10 @@ export default {
       type: String,
       require: true,
     },
-    // isShowYourName: {
-    //   type: Boolean,
-    //   default: true,
-    // },
+    seeCreator: {
+      type: Boolean,
+      default: true,
+    },
   },
   methods: {
     canShowYourName() {
