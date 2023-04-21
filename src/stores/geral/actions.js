@@ -7,6 +7,11 @@ const setDataCard = function (payload) {
   };
 };
 
+const setPlaceHolderLink = function (payload) {
+  this.PlaceHolderLink = payload;
+};
+
 export default {
   setDataCard,
+  setPlaceHolderLink
 };

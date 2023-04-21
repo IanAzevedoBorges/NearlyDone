@@ -3,11 +3,18 @@ import paginaFora from "pages/PaginaFora";
 import indexPage from "pages/IndexPage";
 import paginaDentro from "pages/PaginaDentro";
 import ICard from "components/ICard";
+import AxiosDentro from "pages/AxiosDentro";
+import AxiosFora from "pages/AxiosFora";
 
 const routes = [
   {
     path: "/pagina-fora",
     component: paginaFora,
+  },
+  {
+    path: "/axios-fora",
+    component: AxiosFora,
+    name: "AxiosFora",
   },
   {
     path: "/",
@@ -24,6 +31,11 @@ const routes = [
         path: "/i-card",
         component: ICard,
         name: "i-card",
+      },
+      {
+        path: "/axios-dentro",
+        component: AxiosDentro,
+        name: "AxiosDentro",
       },
     ],
   },

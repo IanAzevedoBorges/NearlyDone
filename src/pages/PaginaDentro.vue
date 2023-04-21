@@ -4,10 +4,18 @@
     <input type="text" v-model="modelCard.topic" placeholder="Topic" /><br />
     <hr />
     <br />
-    <input type="text" v-model="modelCard.yourName" placeholder="Your Name" /><br />
+    <input
+      type="text"
+      v-model="modelCard.yourName"
+      placeholder="Your Name"
+    /><br />
     <hr />
     <br />
-    <input type="text" v-model="modelCard.mensagem" placeholder="Mensagem" /><br />
+    <input
+      type="text"
+      v-model="modelCard.mensagem"
+      placeholder="Mensagem"
+    /><br />
     <hr />
     <br />
     <input
@@ -39,39 +47,37 @@ import ICard from "components/ICard";
 export default {
   data() {
     return {
-      modelCard:{
+      modelCard: {
         topic: "Outra coisa",
         yourName: "",
         mensagem: "",
         seeCreator: false,
-      }
+      },
     };
   },
   components: {
     ICard,
   },
-  computed:{
-    ...mapState({
-      
-  }),
+  computed: {
+    ...mapState(geralStore, {
+      getDataCard: "getDataCard",
+    }),
+  },
+  mounted() {
+    this.modelCard = this.getDataCard;
+    console.log(this.getDataCard);
   },
   methods: {
-    mounted() {
-      this.mapState
-    },
     ...mapActions(geralStore, {
-      setDataCard:"setDataCard"
+      setDataCard: "setDataCard",
     }),
     onClick() {
-      this.seeCreator = this.$refs.Card1.canShowYourName();
-      console.log("checkbox", this.seeCreator);
+      this.modelCard.seeCreator = this.$refs.Card1.canShowYourName();
+      console.log("checkbox", this.modelCard.seeCreator);
     },
-    saveCard(){
-      this.setDataCard(this.modelCard)
+    saveCard() {
+      this.setDataCard(this.modelCard);
     },
-    reLoadCard(){
-
-    }
   },
 };
 </script>

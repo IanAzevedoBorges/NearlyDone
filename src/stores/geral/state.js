@@ -1,11 +1,13 @@
 const state = () => {
   return {
     dataCard: {
-      topic:"",
-      yourName:"",
-      mensagem:"",
-      canShow: true
+      topic: "",
+      yourName: "",
+      mensagem: "",
+      canShow: true,
+      //^^^^^
     },
+    PlaceHolderLink: "",
   };
 };
 

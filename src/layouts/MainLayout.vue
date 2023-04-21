@@ -59,16 +59,16 @@ const linksList = [
     link: "/pagina-fora",
   },
   {
-    title: "Forum",
+    title: "FoAxios dentrorum",
     caption: "forum.quasar.dev",
     icon: "record_voice_over",
-    link: "https://forum.quasar.dev",
+    link: "/axios-dentro",
   },
   {
-    title: "Twitter",
+    title: "Axios fora",
     caption: "@quasarframework",
     icon: "rss_feed",
-    link: "https://twitter.quasar.dev",
+    link: "/axios-fora",
   },
   {
     title: "Facebook",
